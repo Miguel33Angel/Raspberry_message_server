@@ -12,3 +12,9 @@ Future improvements:
 - Add more ESP32 easily through the browser
 - Store last 5 messages sent
 - Actually good looking GUI
+
+
+Tools used:
+Flask        (python web frame)
+Raspberry pi (hardware)
+Postman      (Debugging post and get responses)
