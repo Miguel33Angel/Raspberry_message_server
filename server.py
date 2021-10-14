@@ -35,7 +35,7 @@ def receive_message():
 @app.route('/message/<ESP32_id>', methods=['GET'])
 def send_message(ESP32_id):
     n = int(ESP32_id)
-    return "Hola "+users[n].get('name')+"! ESP n:"+str(n)
+    return users[n].get('last_m')
 
 
 if __name__ == '__main__':
