@@ -14,6 +14,18 @@ users = [
         {'id': 1, 'name': 'Mangel', 'last_m': 'Hi!'}
     ]
 
+last_messages=[
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9'
+]
 
 @app.route('/')
 @app.route('/home')
@@ -28,6 +40,9 @@ def receive_message():
         message = request.form[key]
         if len(message) > 0:
             user['last_m'] = message
+        for i in range(9):
+            last_messages[i] = last_messages[i + 1]
+        last_messages[9] = message
 
     return render_template('home.html', users=users)
 
