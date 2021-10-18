@@ -31,7 +31,7 @@ last_messages=[
 @app.route('/')
 @app.route('/home')
 def home_page():
-    return render_template('home.html', users=users)
+    return render_template('home.html', users=users, last_messages=last_messages)
 
 
 @app.route('/', methods=['POST'])
