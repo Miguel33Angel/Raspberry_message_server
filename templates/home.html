@@ -19,7 +19,7 @@
         Last message sent to {{ user.name }}: {{user.last_m}}<br>
         <br>
         <label for="InputMessage">Send new message to {{ user.name }}:</label>
-        <input type="text" class="form-control" name="message_to_{{ user.name }}" maxlength="15" id="InputMessage" aria-describedby="messageHelp" placeholder="Enter message">
+        <input type="text" class="form-control" name="message_to_{{ user.name }}" maxlength="25" id="InputMessage" aria-describedby="messageHelp" placeholder="Enter message">
         <small id="messageHelp" class="form-text text-muted">Whatever you send here will be displayed on the ESP32 of {{ user.name }}</small>
         {% endfor %}
       </div>

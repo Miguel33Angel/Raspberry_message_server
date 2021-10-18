@@ -27,6 +27,7 @@ last_messages=[
     '9'
 ]
 
+
 @app.route('/')
 @app.route('/home')
 def home_page():
@@ -44,7 +45,7 @@ def receive_message():
             last_messages[i] = last_messages[i + 1]
         last_messages[9] = message
 
-    return render_template('home.html', users=users)
+    return render_template('home.html', users=users, last_messages=last_messages)
 
 
 @app.route('/message/<ESP32_id>', methods=['GET'])
@@ -54,7 +55,7 @@ def send_message(ESP32_id):
 
 
 if __name__ == '__main__':
-    # app.run(debug=True, port=8800) Only if no terminal is being used
-    print("Server running")
+    app.run(debug=True, host='0.0.0.0')
+    # print("Server running")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
