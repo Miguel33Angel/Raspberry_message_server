@@ -26,11 +26,11 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    {% for message in last_messages %}
+    {% for this_message in last_messages %}
     <br>
-    message
+    {{ this_message }}
     <br>
-    {% end for %}
+    {% endfor %}
 
     <!-- Optional JavaScript; choose one of the two! -->
 
