@@ -1,4 +1,4 @@
-# Raspberry_server
+# Raspberry_message_server
 Basic server using Flask to be implemented in a raspberry pi. It will be part of a beeper implemented with ESP32.
 
 The most important characteristics are:
@@ -15,6 +15,7 @@ Future improvements:
 
 
 Tools used:
-Flask        (python web frame)
+Flask        (python web controller)
+Nginx        (web server installed in hw)
 Raspberry pi (hardware)
 Postman      (Debugging post and get responses)
